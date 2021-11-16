@@ -1,0 +1,52 @@
+{
+  "name": "typescript-design-patterns",
+  "version": "1.0.0",
+  "description": "Design Patterns in TypeScript",
+  "author": "Francis Lagares",
+  "homepage": "https://github.com/francislagares/typescript-design-patterns#readme",
+  "scripts": {
+    "build": "tsc",
+    "build-dev": "tsc --watch",
+    "start": "nodemon dist/index.js",
+    "start:dev": "concurrently \"yarn:build-dev\" \"yarn:start\"",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "lint": "eslint --ext js,jsx,ts,tsx --fix --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx|json|md)\" --write",
+    "stylelint": "stylelint **/*.{css,scss,tsx,js} --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francislagares/typescript-design-patterns.git"
+  },
+  "keywords": [
+    "DesignPatterns",
+    "TypeScript"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "@types/node": "^16.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "commitizen": "^4.2.4",
+    "concurrently": "^6.4.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.0.2",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "packageManager": "yarn@3.1.0"
+}
